@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import { View, Text, StyleSheet, ScrollView, Dimensions } from "react-native";
 import Header from "../components/Header";
 import ResumeCard from "../components/ResumeCard";
+import Experience from "../components/Experience";
 
 const Home: FC = function () {
   return (
@@ -9,6 +10,7 @@ const Home: FC = function () {
       <Header />
       <ScrollView style={styles.scrollContainer}>
         <ResumeCard />
+        <Experience />
         <Text style={styles.text}>
           {" "}
           Lorem ipsum dolor sit amet consectetur adipisicing elit.

@@ -5,7 +5,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 
 const ResumeCard: FC = function () {
   return (
-    <View style={{ flex: 1, paddingTop: "20%" }}>
+    <View style={styles.container}>
       <View style={styles.imageContainer}>
         <Image
           style={styles.avatarProfile}
@@ -73,10 +73,16 @@ const windowHeight = Dimensions.get("window").height;
 console.log(windowHeight, windowWidht);
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: windowHeight > 800 ? "15%" : "20%",
+    marginBottom: windowHeight > 800 ? "5%" : "10%",
+  },
   imageContainer: {
     flexDirection: "row",
     flex: 1,
     alignItems: "center",
+    paddingBottom: windowHeight > 800 ? "10%" : "5%",
   },
   rightContainer: {
     flex: 1,
