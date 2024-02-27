@@ -7,8 +7,12 @@ import Experience from "../components/Experience";
 const Home: FC = function () {
   return (
     <View style={{ flex: 1 }}>
-      <Header />
-      <ScrollView style={styles.scrollContainer}>
+      <ScrollView
+        style={styles.scrollContainer}
+        StickyHeaderComponent={Header}
+        stickyHeaderIndices={[0]}
+      >
+        <Header />
         <ResumeCard />
         <Experience />
         <Text style={styles.text}>
@@ -37,7 +41,6 @@ const styles = StyleSheet.create({
   scrollContainer: {
     flex: 1,
     paddingHorizontal: windowWidht > 600 ? "20%" : "5%",
-    backgroundColor: "black",
   },
   text: {
     fontSize: 16,

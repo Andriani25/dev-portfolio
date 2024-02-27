@@ -2,6 +2,7 @@ import Rect, { FC } from "react";
 import { View, Text, StyleSheet, Image, Dimensions } from "react-native";
 import { Button } from "@rneui/themed";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { A } from "@expo/html-elements";
 
 const ResumeCard: FC = function () {
   return (
@@ -36,10 +37,7 @@ const ResumeCard: FC = function () {
             }}
           />
         ) : (
-          <Button
-            size="lg"
-            icon={<Ionicons name="logo-linkedin" color="white" size={15} />}
-          />
+          <A style={styles.linkedinIcon} />
         )}
       </View>
       <View style={styles.textContainer}>
@@ -76,13 +74,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: windowHeight > 800 ? "15%" : "20%",
-    marginBottom: windowHeight > 800 ? "5%" : "10%",
+    marginBottom: windowHeight > 800 ? "0%" : "10%",
   },
   imageContainer: {
     flexDirection: "row",
     flex: 1,
     alignItems: "center",
-    paddingBottom: windowHeight > 800 ? "10%" : "5%",
+    paddingBottom: windowHeight > 800 ? "5%" : "5%",
   },
   rightContainer: {
     flex: 1,
@@ -93,7 +91,6 @@ const styles = StyleSheet.create({
   textContainer: {
     flexDirection: "column",
     marginTop: windowHeight > 800 ? 20 : 30,
-    backgroundColor: "black",
   },
   title: {
     fontSize: windowWidht > 600 ? 60 : 40,
@@ -107,8 +104,6 @@ const styles = StyleSheet.create({
   },
   avatarProfile: {
     borderRadius: 1000,
-    borderWidth: 3,
-    borderColor: "black",
     height: windowHeight > 800 ? 175 : 100,
     width: windowWidht > 500 ? 175 : 100,
   },
@@ -116,6 +111,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     height: 10,
     width: 10,
+    borderColor: "blue",
   },
 });
 

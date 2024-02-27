@@ -1,53 +1,59 @@
 import React, { FC } from "react";
-import { View, Text, StyleSheet } from "react-native";
-import { Button } from "@rneui/themed";
+import { View, Text, StyleSheet, Dimensions } from "react-native";
+import { A } from "@expo/html-elements";
 
 const Header: FC = function () {
   return (
     <View style={styles.container}>
-      <Button
-        buttonStyle={{
-          borderLeftWidth: 5,
-          borderTopLeftRadius: 10,
-          borderBottomLeftRadius: 10,
-          paddingVertical: 10,
-        }}
-        size="sm"
-        color={"black"}
-        title="Home"
-      />
-      <Button
-        buttonStyle={{ paddingVertical: 10 }}
-        size="sm"
-        color={"black"}
-        title="About"
-      />
-      <Button
-        buttonStyle={{ paddingVertical: 10 }}
-        size="sm"
-        color={"black"}
-        title="Projects"
-      />
-      <Button
-        buttonStyle={{
-          borderRightWidth: 5,
-          borderTopRightRadius: 10,
-          borderBottomRightRadius: 10,
-          paddingVertical: 10,
-        }}
-        size="sm"
-        color={"black"}
-        title="Contacts"
-      />
+      <A
+        style={[
+          styles.linkButton,
+          { borderBottomLeftRadius: 100, borderRightWidth: 0 },
+        ]}
+      >
+        Home
+      </A>
+      <A
+        style={[styles.linkButton, { borderLeftWidth: 0, borderRightWidth: 0 }]}
+      >
+        Experience
+      </A>
+      <A
+        style={[styles.linkButton, { borderLeftWidth: 0, borderRightWidth: 0 }]}
+      >
+        Projects
+      </A>
+      <A
+        style={[
+          styles.linkButton,
+          { borderLeftWidth: 0, borderBottomRightRadius: 100 },
+        ]}
+      >
+        About
+      </A>
     </View>
   );
 };
+
+const windowHeight = Dimensions.get("window").height;
+const windowWidht = Dimensions.get("window").width;
 
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
+  },
+  linkButton: {
+    paddingVertical: 10,
+    height: windowWidht > 800 ? "100%" : "100%",
+    width: windowWidht > 400 ? "10%" : "25%",
+    color: "white",
+    borderWidth: 2,
+    borderTopWidth: 0,
+    borderColor: "white",
+    textAlign: "center",
+    fontSize: windowWidht > 400 ? 20 : 15,
     backgroundColor: "black",
   },
 });

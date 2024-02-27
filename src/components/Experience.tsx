@@ -12,12 +12,27 @@ const Experience: FC = function () {
       <View style={{ flex: 1, flexDirection: "row" }}>
         <View style={styles.leftContainer}>
           <Text style={styles.subTitle}>
-            Front-End Web Developer | Universidad de San Pablo Tucuman
+            Front-End Web Developer | Universidad de San Pablo Tucuman [ 2023 -
+            2024 ]
           </Text>
         </View>
         <View style={styles.rightContainer}>
           <Text style={styles.text}>
-            Update and manteinance of the university main page
+            Update and manteinance of the university main page. My todo list
+            was: update calendars, fix forms, add new visuals and +
+          </Text>
+        </View>
+      </View>
+      <View style={styles.lineBetween} />
+      <View style={{ flex: 1, flexDirection: "row" }}>
+        <View style={styles.leftContainer}>
+          <Text style={styles.subTitle}>
+            Movile Developer | AsesoresGroup [ Current Work ]
+          </Text>
+        </View>
+        <View style={styles.rightContainer}>
+          <Text style={styles.text}>
+            Starting a new project, making a radio player for Play Store
           </Text>
         </View>
       </View>
@@ -38,12 +53,14 @@ const styles = StyleSheet.create({
   leftContainer: {
     flex: 1,
     justifyContent: "center",
-    backgroundColor: "red",
+    paddingLeft: 40,
+    paddingVertical: 20,
   },
   rightContainer: {
     flex: 1,
     justifyContent: "center",
-    backgroundColor: "red",
+    paddingLeft: 40,
+    paddingVertical: 20,
   },
   title: {
     fontSize: 25,
@@ -58,7 +75,15 @@ const styles = StyleSheet.create({
   },
   subTitle: {
     color: "white",
+    fontWeight: "500",
     fontSize: windowWidht > 500 ? 23 : 16,
+  },
+  lineBetween: {
+    alignSelf: "center",
+    height: windowHeight > 800 ? 5 : 2,
+    width: windowWidht > 400 ? "95%" : "90%",
+    backgroundColor: "white",
+    borderRadius: 1000,
   },
 });
 
