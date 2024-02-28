@@ -32,7 +32,8 @@ const Experience: FC = function () {
         </View>
         <View style={styles.rightContainer}>
           <Text style={styles.text}>
-            Starting a new project, making a radio player for Play Store
+            Starting a new project, making a live radio player for Play Store.
+            Radio station's like "Los40", "Radio Tucuman"
           </Text>
         </View>
       </View>

@@ -1,8 +1,7 @@
 import Rect, { FC } from "react";
 import { View, Text, StyleSheet, Image, Dimensions } from "react-native";
-import { Button } from "@rneui/themed";
-import Ionicons from "@expo/vector-icons/Ionicons";
 import { A } from "@expo/html-elements";
+import { AntDesign } from "@expo/vector-icons";
 
 const ResumeCard: FC = function () {
   return (
@@ -12,33 +11,21 @@ const ResumeCard: FC = function () {
           style={styles.avatarProfile}
           source={require("../../assets/dev.png")}
         />
-
-        {windowWidht > 600 ? (
-          <Button
-            size="lg"
-            title="Open to work!"
-            icon={
-              <Ionicons
-                name="logo-linkedin"
-                color="white"
-                size={20}
-                style={{ marginRight: 10 }}
-              />
-            }
-            buttonStyle={{
-              height: 40,
-              width: 175,
-              borderRadius: 10,
-              marginLeft: 40,
-            }}
-            titleStyle={{
-              fontSize: 15,
-              fontWeight: "bold",
-            }}
-          />
-        ) : (
-          <A style={styles.linkedinIcon} />
-        )}
+        <A
+          href="https://www.linkedin.com/in/andriani-leandro/"
+          target="_blank"
+          role="link"
+          style={styles.linkedinContainer}
+        >
+          {
+            <AntDesign
+              name="linkedin-square"
+              size={windowWidht > 400 ? 50 : 24}
+              style={{ alignSelf: "center" }}
+              color="white"
+            />
+          }
+        </A>
       </View>
       <View style={styles.textContainer}>
         <Text style={styles.title}>Hi, i'm Leandro</Text>
@@ -80,7 +67,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     flex: 1,
     alignItems: "center",
-    paddingBottom: windowHeight > 800 ? "5%" : "5%",
+    justifyContent: "flex-start",
+  },
+  linkedinContainer: {
+    marginLeft: windowWidht > 400 ? 50 : 25,
+    height: windowHeight > 800 ? "15%" : "30%",
+    width: windowWidht > 400 ? "5%" : "10%",
   },
   rightContainer: {
     flex: 1,
@@ -108,10 +100,10 @@ const styles = StyleSheet.create({
     width: windowWidht > 500 ? 175 : 100,
   },
   linkedinIcon: {
-    paddingHorizontal: 10,
-    height: 10,
-    width: 10,
-    borderColor: "blue",
+    textAlign: "center",
+    textAlignVertical: "center",
+    color: "white",
+    fontWeight: "500",
   },
 });
 

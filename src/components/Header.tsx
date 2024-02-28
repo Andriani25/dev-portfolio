@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { View, Text, StyleSheet, Dimensions } from "react-native";
 import { A } from "@expo/html-elements";
+import { LinearGradient } from "expo-linear-gradient";
 
 const Header: FC = function () {
   return (
@@ -49,9 +50,7 @@ const styles = StyleSheet.create({
     height: windowWidht > 800 ? "100%" : "100%",
     width: windowWidht > 400 ? "10%" : "25%",
     color: "white",
-    borderWidth: 2,
     borderTopWidth: 0,
-    borderColor: "white",
     textAlign: "center",
     fontSize: windowWidht > 400 ? 20 : 15,
     backgroundColor: "black",
