@@ -12,8 +12,8 @@ const Experience: FC = function () {
       <View style={{ flex: 1, flexDirection: "row" }}>
         <View style={styles.leftContainer}>
           <Text style={styles.subTitle}>
-            Front-End Web Developer | Universidad de San Pablo Tucuman [ 2023 -
-            2024 ]
+            Front-End Web Developer | Universidad de San Pablo Tucuman [2023 -
+            2024]
           </Text>
         </View>
         <View style={styles.rightContainer}>
@@ -27,7 +27,7 @@ const Experience: FC = function () {
       <View style={{ flex: 1, flexDirection: "row" }}>
         <View style={styles.leftContainer}>
           <Text style={styles.subTitle}>
-            Movile Developer | AsesoresGroup [ Current Work ]
+            Movile Developer | AsesoresGroup [Current Work]
           </Text>
         </View>
         <View style={styles.rightContainer}>

@@ -12,7 +12,7 @@ export default function App() {
           <StatusBar style="auto" />
           <LinearGradient
             style={styles.container}
-            colors={["#020024", "#6c91cc"]}
+            colors={["#b00000", "#411903"]}
           >
             <Home />
           </LinearGradient>
